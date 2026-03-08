@@ -14,7 +14,7 @@ const PublicMenuPage = () => {
     const load = async () => {
       try {
         const res = await fetch(
-          `http://localhost:9095/api/v1/public/menu/${code}`
+          `https://smart-restaurant-frontend-gray.vercel.app/api/v1/public/menu/${code}`
         );
         if (!res.ok) throw new Error("Failed to load menu");
         const data = await res.json();
