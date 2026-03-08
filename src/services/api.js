@@ -21,7 +21,7 @@ api.interceptors.request.use((config) => {
 
 // Auth APIs
 export const authAPI = {
-  login: (data) => api.post('/auth/login', data),
+  login: (data) => api.post('/api/v1/auth/login', data),
   register: (data) => api.post('/restaurants/register', data),
 };
 
