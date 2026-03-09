@@ -718,11 +718,15 @@ const topItemsChartData =
       const diffMs = now - createdAt;
       const isNew = diffMs < 5 * 60 * 1000; // 5 minutes
 
-      const timeLabel = createdAt.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      const dateLabel = createdAt.toLocaleDateString();
+      const timeLabel = createdAt.toLocaleTimeString("en-IN", {
+  timeZone: "Asia/Kolkata",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
+const dateLabel = createdAt.toLocaleDateString("en-IN", {
+  timeZone: "Asia/Kolkata",
+});
 
       const cleanMessage = a.message.replace(
     /([0-9]{2}:[0-9]{2}:[0-9]{2})\.[0-9]+/,
